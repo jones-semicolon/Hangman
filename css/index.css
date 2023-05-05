@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  background-color: hsl(0 0% 92%);
+  padding: 1rem;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.keyboard button {
+  aspect-ratio: 1/1.5;
+  text-transform: uppercase;
+  grid-column: span 2;
+  position: relative;
+}
+
+.keyboard button:nth-child(11) {
+  grid-column: 2 / 4;
+}
+.keyboard button:nth-child(20) {
+  grid-column: 4 / 6;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+.hangman {
+  max-width: 100%;
+  outline-color: red;
+}
+
+.guess {
+  display: grid;
+  grid-template-columns: repeat(5, 2rem);
+  place-content: center;
+  gap: 1rem;
+}
+
+.guess > * {
+  aspect-ratio: 1;
+  border-bottom: 2px solid hsl(0 0% 20%);
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.keyboard button:disabled::after {
+  content: "x";
+  position: absolute;
+  color: hsl(0 60% 60%);
+  font-size: 1.5rem;
+  inset:
+  50% auto
+  auto
+  50%;
+  translate: -50% -50%;
+}
