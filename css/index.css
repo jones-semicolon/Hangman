@@ -8,9 +8,13 @@
 
 body {
   height: 100vh;
+  height: 100dvh;
   display: grid;
   background-color: hsl(0 0% 92%);
   padding: 1rem;
+  font-family:
+  helvetica,
+  sans;
 }
 
 .keyboard {
@@ -65,9 +69,6 @@ canvas {
   position: absolute;
   color: hsl(0 60% 60%);
   font-size: 1.5rem;
-  inset:
-  50% auto
-  auto
-  50%;
+  inset: 50% auto auto 50%;
   translate: -50% -50%;
 }
